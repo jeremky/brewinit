@@ -28,14 +28,14 @@ if ! command -v "$BREW_PATH" >/dev/null 2>&1; then
   eval "$($BREW_PATH shellenv)"
 fi
 
-# Installe les apps CLI
-if [[ -f "$dir/brewinstall.apps.cfg" ]]; then
-  brew install $(grep -v -E '^\s*#|^\s*$' "$dir/brewinstall.apps.cfg")
+# Installe les apps cli
+if [[ -f "$dir/cli.cfg" ]]; then
+  brew install $(grep -v -E '^\s*#|^\s*$' "$dir/config/cli.cfg")
 fi
 
 # Installe les apps macOS (cask)
-if [[ -f "$dir/brewinstall.cask.cfg" ]]; then
-  brew install --cask $(grep -v -E '^\s*#|^\s*$' "$dir/brewinstall.cask.cfg")
+if [[ -f "$dir/apps.cfg" ]]; then
+  brew install --cask $(grep -v -E '^\s*#|^\s*$' "$dir/config/apps.cfg")
 fi
 
 # Mise à jour et nettoyage

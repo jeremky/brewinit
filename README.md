@@ -1,30 +1,27 @@
-# brewinstall
+# brewinit
 
 Ce script a pour objectif d'installer [brew](https://brew.sh/) ainsi que des applications cli et macOS présentes dans des fichiers dédiés.
 
 Le script va également désactiver la création automatique des fichiers `.DS_Store` sur les partages réseau.
 
-## Préparation
-
-Avant d'exécuter le script, il est nécessaire de vérifier les fichiers suivants :
-
-- `brewinstall.apps.cfg`
-- `brewinstall.cask.cfg`
-
-Ces fichiers contiennent les applications qui seront automatiquement installées.
-Les lignes commençant par `#` sont ignorées.
-
 ## Utilisation
 
-1. Clonez ou téléchargez ce répertoire
+1. Téléchargez ou clonez ce répertoire
 
-2. Éditez `brewinstall.apps.cfg` et `brewinstall.cask.cfg` selon vos besoins
+   ```bash
+   git clone https://github.com/jeremky/brewinit.git
+   cd brewinit
+   ```
 
-3. Exécutez le script :
+2. Dans `config`, éditez `apps.cfg` et `cask.cfg` selon vos besoins
 
-```bash
-cd brewinstall
-./brewinstall.sh
-```
+   > Les lignes commençant par `#` sont ignorées
 
+3. Exécutez le script
+
+   ```bash
+   ./brewinit.sh
+   ```
+
+> [!IMPORTANT]
 > Le script demandera votre mot de passe sudo pour l'opération concernant les fichiers `.DS_Store`
