@@ -1,6 +1,6 @@
 # brewinit
 
-This script installs [brew](https://brew.sh/) along with the CLI and macOS apps listed in dedicated files.
+This script installs [Homebrew](https://brew.sh/) along with the CLI and macOS apps listed in dedicated files.
 
 The script also disables the automatic creation of `.DS_Store` files on network shares.
 
