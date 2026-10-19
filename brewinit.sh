@@ -1,5 +1,5 @@
 #!/bin/bash
-# shellcheck disable=SC2046 # intentional split: package list passed as multiple arguments
+# shellcheck disable=SC2046
 
 dir=$(dirname "$(realpath "$0")")
 
