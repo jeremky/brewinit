@@ -29,12 +29,12 @@ if ! command -v "$BREW_PATH" >/dev/null 2>&1; then
 fi
 
 # Install CLI apps
-if [[ -f "$dir/cli.cfg" ]]; then
+if [[ -f "$dir/config/cli.cfg" ]]; then
   brew install $(grep -v -E '^\s*#|^\s*$' "$dir/config/cli.cfg")
 fi
 
 # Install macOS apps (cask)
-if [[ -f "$dir/apps.cfg" ]]; then
+if [[ -f "$dir/config/apps.cfg" ]]; then
   brew install --cask $(grep -v -E '^\s*#|^\s*$' "$dir/config/apps.cfg")
 fi
 
