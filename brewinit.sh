@@ -38,5 +38,5 @@ if [[ -f "$dir/config/apps.cfg" ]]; then
   brew install --cask $(grep -v -E '^\s*#|^\s*$' "$dir/config/apps.cfg")
 fi
 
-# Update and clean up
-brew update && brew cleanup
+# Clean up
+brew cleanup
